@@ -18,6 +18,6 @@ providers.forEach(provider => {
 
     const filename = slugify(provider.name)
 
-    fs.writeFileSync(`../providers/${filename}.md`, output)
+    fs.writeFileSync(`../docs/providers/${filename}.md`, output)
 })
 
