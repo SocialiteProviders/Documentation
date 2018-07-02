@@ -68,7 +68,8 @@ You will need to add an entry to the services configuration file so that after c
 'okta' => [
     'client_id' => env('OKTA_KEY'),
     'client_secret' => env('OKTA_SECRET'),
-    'redirect' => env('OKTA_REDIRECT_URI')
+    'redirect' => env('OKTA_REDIRECT_URI'),
+    'base_url' => env('OKTA_BASE_URL')
 ],
 ```
 
