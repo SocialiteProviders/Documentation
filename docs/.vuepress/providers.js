@@ -1,3 +1,4 @@
+
 module.exports = [{
   "name": "23andme",
   "github": "https://github.com/SocialiteProviders/23andme",
@@ -587,6 +588,13 @@ module.exports = [{
   "maintainer_profile": "https://github.com/faustbrian",
   "packagist": "socialiteproviders/uber",
   "listener": "SocialiteProviders\\Uber\\UberExtendSocialite@handle"
+}, {
+  "name": "UFS",
+  "github": "https://github.com/SocialiteProviders/UFS",
+  "maintainer": "claudsonm",
+  "maintainer_profile": "https://github.com/claudsonm",
+  "packagist": "socialiteproviders/ufs",
+  "listener": "SocialiteProviders\\UFS\\UFSExtendSocialite@handle"
 }, {
   "name": "Venmo",
   "github": "https://github.com/SocialiteProviders/Venmo",
