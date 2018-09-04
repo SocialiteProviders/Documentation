@@ -553,6 +553,13 @@ module.exports = [{
   "packagist": "socialiteproviders/stripe",
   "listener": "SocialiteProviders\\Stripe\\StripeExtendSocialite@handle"
 }, {
+  "name": "Teamweek",
+  "github": "https://github.com/SocialiteProviders/Teamweek",
+  "maintainer": "dees040",
+  "maintainer_profile": "https://github.com/dees040",
+  "packagist": "socialiteproviders/teamweek",
+  "listener": "SocialiteProviders\\Teamweek\\TeamweekExtendSocialite@handle"
+}, {
   "name": "Trello",
   "github": "https://github.com/SocialiteProviders/Trello",
   "maintainer": "faustbrian",
