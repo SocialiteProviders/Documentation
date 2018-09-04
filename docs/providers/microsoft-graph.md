@@ -118,6 +118,14 @@ $config = new \SocialiteProviders\Manager\Config($clientId, $clientSecret, $redi
 return Socialite::with('graph')->setConfig($config)->redirect();
 ```
 
+### Using a Custom Tenant Id
+
+You only need to perform this step if you wish for users to login to their specific tenants. For most use cases the `common` tenant should be good enough.
+
+```php
+return Socialite::with('graph')->setTenantId('a-microsoft-tenant-id')->redirect();
+```
+
 ### Retrieving the Access Token Response Body
 
 Laravel Socialite by default only allows access to the `access_token`.  Which can be accessed
