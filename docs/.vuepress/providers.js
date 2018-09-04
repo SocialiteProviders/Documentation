@@ -1,4 +1,3 @@
-
 module.exports = [{
   "name": "23andme",
   "github": "https://github.com/SocialiteProviders/23andme",
