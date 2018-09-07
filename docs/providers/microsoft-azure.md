@@ -131,6 +131,15 @@ $user = Socialite::driver('azure')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+### Accessing Graph Data
+When accessing graph data you might run into issues when there are conditional policies like MFA set.
+These conditions aren't checked with the initial authorize request except when you specify what data you want to access:
+```php
+Socialite::driver('azure')
+         ->with(['resource' => 'https://graph.windows.net'])
+         ->redirect();
+```
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)
