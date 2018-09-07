@@ -818,6 +818,13 @@ module.exports = [{
   "packagist": "socialiteproviders/mixer",
   "listener": "SocialiteProviders\\Mixer\\MixerExtendSocialite@handle"
 }, {
+  "name": "Mollie",
+  "github": "https://github.com/SocialiteProviders/Mollie",
+  "maintainer": "nickurt",
+  "maintainer_profile": "https://github.com/nickurt",
+  "packagist": "socialiteproviders/mollie",
+  "listener": "SocialiteProviders\\Mollie\\MollieExtendSocialite@handle"
+}, {
   "name": "GameWisp",
   "github": "https://github.com/SocialiteProviders/GameWisp",
   "maintainer": "hootener",
