@@ -202,6 +202,13 @@ module.exports = [{
   "packagist": "socialiteproviders/eyeem",
   "listener": "SocialiteProviders\\EyeEm\\EyeEmExtendSocialite@handle"
 }, {
+  "name": "Facebook",
+  "github": "https://github.com/SocialiteProviders/Facebook",
+  "maintainer": "faustbrian",
+  "maintainer_profile": "https://github.com/faustbrian",
+  "packagist": "socialiteproviders/facebook",
+  "listener": "SocialiteProviders\\Facebook\\FacebookExtendSocialite@handle"
+}, {
   "name": "Fitbit",
   "github": "https://github.com/SocialiteProviders/Fitbit",
   "maintainer": "faustbrian",
