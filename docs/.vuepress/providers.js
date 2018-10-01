@@ -336,6 +336,13 @@ module.exports = [{
   "packagist": "socialiteproviders/mailchimp",
   "listener": "SocialiteProviders\\MailChimp\\MailChimpExtendSocialite@handle"
 }, {
+  "name": "Mattermost",
+  "github": "https://github.com/SocialiteProviders/Mattermost",
+  "maintainer": "takuya",
+  "maintainer_profile": "https://github.com/takuya",
+  "packagist": "socialiteproviders/mattermost",
+  "listener": "SocialiteProviders\\Mattermost\\MattermostExtendSocialite@handle"
+}, {
   "name": "Medium",
   "github": "https://github.com/SocialiteProviders/Medium",
   "maintainer": "barooney",
