@@ -68,7 +68,8 @@ You will need to add an entry to the services configuration file so that after c
 'ufs' => [
     'client_id' => env('UFS_KEY'),
     'client_secret' => env('UFS_SECRET'),
-    'redirect' => env('UFS_REDIRECT_URI')
+    'redirect' => env('UFS_REDIRECT_URI'),
+    'dev_mode' => env('UFS_DEV_MODE'), // optional
 ],
 ```
 
