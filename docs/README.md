@@ -1,5 +1,7 @@
 ---
 home: true
+actionText: Get Started →
+actionLink: /about.html
 features:
 - title: Simplicity First
   details: Minimal setup with a familiar structure helps you focus on developing your newest product.
