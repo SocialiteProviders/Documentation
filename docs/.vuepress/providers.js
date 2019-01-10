@@ -48,6 +48,13 @@ module.exports = [{
   "packagist": "socialiteproviders/bitly",
   "listener": "SocialiteProviders\\Bitly\\BitlyExtendSocialite@handle"
 }, {
+  "name": "Bitbucket",
+  "github": "https://github.com/SocialiteProviders/Bitbucket",
+  "maintainer": "antonkomarev",
+  "maintainer_profile": "https://github.com/antonkomarev",
+  "packagist": "socialiteproviders/bitbucket",
+  "listener": "SocialiteProviders\\Bitbucket\\BitbucketExtendSocialite@handle"
+}, {
   "name": "Box",
   "github": "https://github.com/SocialiteProviders/Box",
   "maintainer": "faustbrian",
