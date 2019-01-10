@@ -230,6 +230,13 @@ module.exports = [{
   "packagist": "socialiteproviders/foursquare",
   "listener": "SocialiteProviders\\Foursquare\\FoursquareExtendSocialite@handle"
 }, {
+  "name": "GitHub",
+  "github": "https://github.com/SocialiteProviders/GitHub",
+  "maintainer": "antonkomarev",
+  "maintainer_profile": "https://github.com/antonkomarev",
+  "packagist": "socialiteproviders/github",
+  "listener": "SocialiteProviders\\GitHub\\GitHubExtendSocialite@handle"
+}, {
   "name": "GitLab",
   "github": "https://github.com/SocialiteProviders/GitLab",
   "maintainer": "mrtnsn",
