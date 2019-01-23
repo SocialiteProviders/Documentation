@@ -223,6 +223,13 @@ module.exports = [{
   "packagist": "socialiteproviders/fitbit",
   "listener": "SocialiteProviders\\Fitbit\\FitbitExtendSocialite@handle"
 }, {
+  "name": "Flexkids",
+  "github": "https://github.com/SocialiteProviders/Flexkids",
+  "maintainer": "steffjenl",
+  "maintainer_profile": "https://github.com/steffjenl",
+  "packagist": "socialiteproviders/flexkids",
+  "listener": "SocialiteProviders\\Flexkids\\FlexkidsExtendSocialite@handle"
+}, {
   "name": "Flickr",
   "github": "https://github.com/SocialiteProviders/Flickr",
   "maintainer": "faustbrian",
