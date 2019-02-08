@@ -426,6 +426,13 @@ module.exports = [{
     "value": "BASE_URL"
   }]
 }, {
+  "name": "Opskins",
+  "github": "https://github.com/SocialiteProviders/Opskins",
+  "maintainer": "sofwar",
+  "maintainer_profile": "https://github.com/sofwar",
+  "packagist": "socialiteproviders/opskins",
+  "listener": "SocialiteProviders\\Opskins\\OpskinsExtendSocialite@handle",
+},{
   "name": "Paymill",
   "github": "https://github.com/SocialiteProviders/Paymill",
   "maintainer": "faustbrian",
