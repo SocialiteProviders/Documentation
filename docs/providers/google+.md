@@ -1,5 +1,5 @@
 ---
-title: "Google"
+title: "Google+"
 ---
 
 ## 1. Installation
@@ -66,9 +66,9 @@ You will need to add an entry to the services configuration file so that after c
 
 ```php
 'google' => [
-    'client_id' => env('GOOGLE_CLIENT_ID'),
-    'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-    'redirect' => env('GOOGLE_CALLBACK_URL'),
+    'client_id' => env('GOOGLE_KEY'),
+    'client_secret' => env('GOOGLE_SECRET'),
+    'redirect' => env('GOOGLE_REDIRECT_URI')
 ],
 ```
 
@@ -79,7 +79,7 @@ You will need to add an entry to the services configuration file so that after c
 * You should now be able to use it like you would regularly use Socialite (assuming you have the facade installed):
 
 ```php
-return Socialite::with('Google')->redirect();
+return Socialite::with('google')->redirect();
 ```
 
 ### Lumen Support
@@ -99,10 +99,10 @@ Also, configs cannot be parsed from the `services[]` in Lumen.  You can only set
 
 ```php
 // to turn off stateless
-return Socialite::with('Google')->stateless(false)->redirect();
+return Socialite::with('google')->stateless(false)->redirect();
 
 // to use stateless
-return Socialite::with('Google')->stateless()->redirect();
+return Socialite::with('google')->stateless()->redirect();
 ```
 
 ### Overriding a config
@@ -115,7 +115,7 @@ $clientSecret = "secret";
 $redirectUrl = "http://yourdomain.com/api/redirect";
 $additionalProviderConfig = ['site' => 'meta.stackoverflow.com'];
 $config = new \SocialiteProviders\Manager\Config($clientId, $clientSecret, $redirectUrl, $additionalProviderConfig);
-return Socialite::with('Google')->setConfig($config)->redirect();
+return Socialite::with('google')->setConfig($config)->redirect();
 ```
 
 ### Retrieving the Access Token Response Body
@@ -127,7 +127,7 @@ may contain items such as a `refresh_token`.
 You can get the access token response body, after you called the `user()` method in Socialite, by accessing the property `$user->accessTokenResponseBody`;
 
 ```php
-$user = Socialite::driver('Google')->user();
+$user = Socialite::driver('google')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
