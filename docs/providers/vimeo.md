@@ -79,7 +79,7 @@ You will need to add an entry to the services configuration file so that after c
 * You should now be able to use it like you would regularly use Socialite (assuming you have the facade installed):
 
 ```php
-return Socialite::with('Vimeo')->redirect();
+return Socialite::with('vimeo')->redirect();
 ```
 
 ### Lumen Support
@@ -99,10 +99,10 @@ Also, configs cannot be parsed from the `services[]` in Lumen.  You can only set
 
 ```php
 // to turn off stateless
-return Socialite::with('Vimeo')->stateless(false)->redirect();
+return Socialite::with('vimeo')->stateless(false)->redirect();
 
 // to use stateless
-return Socialite::with('Vimeo')->stateless()->redirect();
+return Socialite::with('vimeo')->stateless()->redirect();
 ```
 
 ### Overriding a config
@@ -115,7 +115,7 @@ $clientSecret = "secret";
 $redirectUrl = "http://yourdomain.com/api/redirect";
 $additionalProviderConfig = ['site' => 'meta.stackoverflow.com'];
 $config = new \SocialiteProviders\Manager\Config($clientId, $clientSecret, $redirectUrl, $additionalProviderConfig);
-return Socialite::with('Vimeo')->setConfig($config)->redirect();
+return Socialite::with('vimeo')->setConfig($config)->redirect();
 ```
 
 ### Retrieving the Access Token Response Body
