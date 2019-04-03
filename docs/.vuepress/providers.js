@@ -357,6 +357,13 @@ module.exports = [{
   "packagist": "socialiteproviders/mailchimp",
   "listener": "SocialiteProviders\\MailChimp\\MailChimpExtendSocialite@handle"
 }, {
+  "name": "Masterchain",
+  "github": "https://github.com/SocialiteProviders/Masterchain",
+  "maintainer": "thekdesign",
+  "maintainer_profile": "https://github.com/thekdesign",
+  "packagist": "socialiteproviders/masterchain",
+  "listener": "SocialiteProviders\\Masterchain\\MasterchainExtendSocialite@handle"
+}, {
   "name": "Mattermost",
   "github": "https://github.com/SocialiteProviders/Mattermost",
   "maintainer": "takuya",
