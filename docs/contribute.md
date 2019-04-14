@@ -52,7 +52,7 @@ You can easily override a built-in laravel/socialite provider by creating a new 
 
 ## Tests
 
-If we have tests in the repo (currently and foreseeably only the (<a href="https://github.com/SocialiteProviders/Manager">Manager</a> package)
+If we have tests in the repo (currently and foreseeably only the <a href="https://github.com/SocialiteProviders/Manager">Manager</a> package)
 you need to have tests cover any changes submitted in a pull request.  We currently use PHPUnit and Mockery for our test suite.
 
 ## Style
