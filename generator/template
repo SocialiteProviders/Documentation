@@ -113,8 +113,16 @@ If you need to override the providers environment or config variables dynamicall
 $clientId = "secret";
 $clientSecret = "secret";
 $redirectUrl = "http://yourdomain.com/api/redirect";
-$additionalProviderConfig = ['site' => 'meta.stackoverflow.com'];
-$config = new \SocialiteProviders\Manager\Config($clientId, $clientSecret, $redirectUrl, $additionalProviderConfig);
+$additionalProviderConfig = [
+    // Add additional configuration values here.
+];
+$config = new \SocialiteProviders\Manager\Config(
+    $clientId,
+    $clientSecret,
+    $redirectUrl,
+    $additionalProviderConfig
+);
+
 return Socialite::with('__SOCIALITE__')->setConfig($config)->redirect();
 ```
 
