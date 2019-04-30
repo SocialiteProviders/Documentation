@@ -76,6 +76,13 @@ module.exports = [{
   "packagist": "socialiteproviders/campaignmonitor",
   "listener": "SocialiteProviders\\CampaignMonitor\\CampaignMonitorExtendSocialite@handle"
 }, {
+  "name": "ClaveUnica",
+  "github": "https://github.com/SocialiteProviders/ClaveUnica",
+  "maintainer": "rodrigore",
+  "maintainer_profile": "https://github.com/rodrigore",
+  "packagist": "socialiteproviders/claveunica",
+  "listener": "SocialiteProviders\\ClaveUnica\\ClaveUnicaExtendSocialite@handle"
+}, {
   "name": "Cheddar",
   "github": "https://github.com/SocialiteProviders/Cheddar",
   "maintainer": "faustbrian",
