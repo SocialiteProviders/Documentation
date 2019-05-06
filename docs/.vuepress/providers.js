@@ -691,7 +691,7 @@ module.exports = [{
   "maintainer": "sinkcup",
   "maintainer_profile": "https://github.com/sinkcup",
   "packagist": "socialiteproviders/wechat-web",
-  "listener": "SocialiteProviders\\WeChat\\WeChatExtendSocialite@handle"
+  "listener": "SocialiteProviders\\WeChatWeb\\WeChatWebExtendSocialite@handle"
 }, {
   "name": "Weibo",
   "github": "https://github.com/SocialiteProviders/Weibo",
