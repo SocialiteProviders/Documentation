@@ -686,6 +686,13 @@ module.exports = [{
   "packagist": "socialiteproviders/vkontakte",
   "listener": "SocialiteProviders\\VKontakte\\VKontakteExtendSocialite@handle"
 }, {
+  "name": "Wechat Service Account",
+  "github": "https://github.com/SocialiteProviders/WeChatServiceAccount",
+  "maintainer": "sinkcup",
+  "maintainer_profile": "https://github.com/sinkcup",
+  "packagist": "socialiteproviders/wechat-service-account",
+  "listener": "SocialiteProviders\\WeChatServiceAccount\\WeChatServiceAccountExtendSocialite@handle"
+}, {
   "name": "Wechat Web",
   "github": "https://github.com/SocialiteProviders/WeChatWeb",
   "maintainer": "sinkcup",
