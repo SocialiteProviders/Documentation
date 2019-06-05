@@ -6,3 +6,6 @@
 .idea
 _site
 Gemfile.lock
+
+docs/.vuepress/dist/
+node_modules/
