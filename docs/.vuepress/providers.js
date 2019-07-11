@@ -429,6 +429,13 @@ module.exports = [{
   "packagist": "socialiteproviders/naver",
   "listener": "SocialiteProviders\\Naver\\NaverExtendSocialite@handle"
 }, {
+  "name": "OAuthgen",
+  "github": "https://github.com/SocialiteProviders/OAuthgen",
+  "maintainer": "icernn03",
+  "maintainer_profile": "https://github.com/icernn03",
+  "packagist": "socialiteproviders/oauthgen",
+  "listener": "SocialiteProviders\\OAuthgen\\OAuthgenExtendSocialite@handle",
+}, {
   "name": "Okta",
   "github": "https://github.com/SocialiteProviders/Okta",
   "maintainer": "chaseconey",
