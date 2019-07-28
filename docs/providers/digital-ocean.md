@@ -79,7 +79,7 @@ You will need to add an entry to the services configuration file so that after c
 * You should now be able to use it like you would regularly use Socialite (assuming you have the facade installed):
 
 ```php
-return Socialite::with('DigitalOcean')->redirect();
+return Socialite::with('digitalocean')->redirect();
 ```
 
 ### Lumen Support
@@ -99,10 +99,10 @@ Also, configs cannot be parsed from the `services[]` in Lumen.  You can only set
 
 ```php
 // to turn off stateless
-return Socialite::with('DigitalOcean')->stateless(false)->redirect();
+return Socialite::with('digitalocean')->stateless(false)->redirect();
 
 // to use stateless
-return Socialite::with('DigitalOcean')->stateless()->redirect();
+return Socialite::with('digitalocean')->stateless()->redirect();
 ```
 
 ### Overriding a config
@@ -115,7 +115,7 @@ $clientSecret = "secret";
 $redirectUrl = "http://yourdomain.com/api/redirect";
 $additionalProviderConfig = ['site' => 'meta.stackoverflow.com'];
 $config = new \SocialiteProviders\Manager\Config($clientId, $clientSecret, $redirectUrl, $additionalProviderConfig);
-return Socialite::with('DigitalOcean')->setConfig($config)->redirect();
+return Socialite::with('digitalocean')->setConfig($config)->redirect();
 ```
 
 ### Retrieving the Access Token Response Body
@@ -127,7 +127,7 @@ may contain items such as a `refresh_token`.
 You can get the access token response body, after you called the `user()` method in Socialite, by accessing the property `$user->accessTokenResponseBody`;
 
 ```php
-$user = Socialite::driver('DigitalOcean')->user();
+$user = Socialite::driver('digitalocean')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
