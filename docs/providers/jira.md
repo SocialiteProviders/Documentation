@@ -66,11 +66,28 @@ You will need to add an entry to the services configuration file so that after c
 
 ```php
 'jira' => [
-    'client_id' => env('JIRA_KEY'),
-    'client_secret' => env('JIRA_SECRET'),
-    'redirect' => env('JIRA_REDIRECT_URI')
+    'client_id'        => env('JIRA_KEY'),
+    'client_secret'    => env('JIRA_SECRET'),
+    'redirect'         => env('JIRA_REDIRECT_URI'),
+    'base_uri'         => env('JIRA_BASE_URI'), // the jira path to the jira server
+    'cert_path'        => env('JIRA_CERT_PATH', storage_path('app/keys/jira.pem')), // this is the default path
+    'site'             => env('JIRA_SITE'), // optional
+    'user_details_url' => env('JIRA_USER_DETAILS_URL'), // optional
 ],
 ```
+
+
+#### Add to `.env`.
+```
+JIRA_KEY=OauthKey
+JIRA_SECRET=YourSecretKey
+JIRA_BASE_URI=https://thejiraserver.com
+JIRA_REDIRECT_URI=https://yourlocalserver.com/callback
+JIRA_CERT_PATH=storage/app/your/path/to/cert.pemn
+JIRA_SITE=https://thejiraserver.com
+JIRA_USER_DETAILS_URL=https://thejiraserver.com/user/details
+```
+
 
 ## 5. Usage
 
