@@ -20,6 +20,13 @@ module.exports = [{
   "packagist": "socialiteproviders/500px",
   "listener": "SocialiteProviders\\FiveHundredPixel\\FiveHundredPixelExtendSocialite@handle"
 }, {
+  "name": "Admitad",
+  "github": "https://github.com/SocialiteProviders/Admitad",
+  "maintainer": "faustbrian",
+  "maintainer_profile": "https://github.com/faustbrian",
+  "packagist": "socialiteproviders/admitad",
+  "listener": "SocialiteProviders\\Admitad\\AdmitadExtendSocialite@handle"
+}, {
   "name": "AngelList",
   "github": "https://github.com/SocialiteProviders/AngelList",
   "maintainer": "faustbrian",
@@ -230,6 +237,13 @@ module.exports = [{
   "packagist": "socialiteproviders/fitbit",
   "listener": "SocialiteProviders\\Fitbit\\FitbitExtendSocialite@handle"
 }, {
+  "name": "Flattr",
+  "github": "https://github.com/SocialiteProviders/Flattr",
+  "maintainer": "faustbrian",
+  "maintainer_profile": "https://github.com/faustbrian",
+  "packagist": "socialiteproviders/flattr",
+  "listener": "SocialiteProviders\\Flattr\\FlattrExtendSocialite@handle"
+}, {
   "name": "Flexkids",
   "github": "https://github.com/SocialiteProviders/Flexkids",
   "maintainer": "steffjenl",
@@ -343,6 +357,13 @@ module.exports = [{
   "packagist": "socialiteproviders/kakao",
   "listener": "SocialiteProviders\\Kakao\\KakaoExtendSocialite@handle"
 }, {
+  "name": "Laravel Passport",
+  "github": "https://github.com/SocialiteProviders/Laravel-Passport",
+  "maintainer": "recca0120",
+  "maintainer_profile": "https://github.com/recca0120",
+  "packagist": "socialiteproviders/laravelpassport",
+  "listener": "SocialiteProviders\\LaravelPassport\\LaravelPassportExtendSocialite@handle"
+}, {
   "name": "LINE",
   "github": "https://github.com/SocialiteProviders/Line",
   "maintainer": "mix5003",
@@ -435,6 +456,13 @@ module.exports = [{
   "maintainer_profile": "https://github.com/icernn03",
   "packagist": "socialiteproviders/oauthgen",
   "listener": "SocialiteProviders\\OAuthgen\\OAuthgenExtendSocialite@handle",
+}, {
+  "name": "Odnoklassniki",
+  "github": "https://github.com/SocialiteProviders/Odnoklassniki",
+  "maintainer": "talgat065",
+  "maintainer_profile": "https://github.com/talgat065",
+  "packagist": "socialiteproviders/odnoklassniki",
+  "listener": "SocialiteProviders\\Odnoklassniki\\OdnoklassnikiExtendSocialite@handle",
 }, {
   "name": "Okta",
   "github": "https://github.com/SocialiteProviders/Okta",
