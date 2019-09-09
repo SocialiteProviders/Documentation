@@ -385,6 +385,13 @@ module.exports = [{
   "packagist": "socialiteproviders/mailchimp",
   "listener": "SocialiteProviders\\MailChimp\\MailChimpExtendSocialite@handle"
 }, {
+  "name": "Mail.ru",
+  "github": "https://github.com/SocialiteProviders/Mailru",
+  "maintainer": "saundefined",
+  "maintainer_profile": "https://github.com/saundefined",
+  "packagist": "socialiteproviders/mailru",
+  "listener": "SocialiteProviders\\Mailru\\MailruExtendSocialite@handle"
+}, {
   "name": "Masterchain",
   "github": "https://github.com/SocialiteProviders/Masterchain",
   "maintainer": "thekdesign",
@@ -435,6 +442,13 @@ module.exports = [{
   "maintainer_profile": "https://github.com/faustbrian",
   "packagist": "socialiteproviders/mixcloud",
   "listener": "SocialiteProviders\\Mixcloud\\MixcloudExtendSocialite@handle"
+}, {
+  "name": "MoiKrug",
+  "github": "https://github.com/SocialiteProviders/Moikrug",
+  "maintainer": "saundefined",
+  "maintainer_profile": "https://github.com/saundefined",
+  "packagist": "socialiteproviders/moikrug",
+  "listener": "SocialiteProviders\\MoiKrug\\MoiKrugExtendSocialite@handle"
 }, {
   "name": "Moves",
   "github": "https://github.com/SocialiteProviders/Moves",
