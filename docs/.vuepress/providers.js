@@ -301,6 +301,13 @@ module.exports = [{
   "packagist": "socialiteproviders/harvest",
   "listener": "SocialiteProviders\\Harvest\\HarvestExtendSocialite@handle"
 }, {
+  "name": "HeadHunter",
+  "github": "https://github.com/SocialiteProviders/HeadHunter",
+  "maintainer": "saundefined",
+  "maintainer_profile": "https://github.com/saundefined",
+  "packagist": "socialiteproviders/headhunter",
+  "listener": "SocialiteProviders\\HeadHunter\\HeadHunterExtendSocialite@handle"
+}, {
   "name": "Heroku",
   "github": "https://github.com/SocialiteProviders/Heroku",
   "maintainer": "faustbrian",
