@@ -985,4 +985,11 @@ module.exports = [{
   "maintainer_profile": "https://github.com/bbeng89",
   "packagist": "socialiteproviders/discogs",
   "listener": "SocialiteProviders\\Discogs\\DiscogsExtendSocialite@handle"
+},{
+  "name": "Zoho",
+  "github": "https://github.com/SocialiteProviders/Zoho",
+  "maintainer": "glowlogix",
+  "maintainer_profile": "https://github.com/glowlogix",
+  "packagist": "socialiteproviders/zoho",
+  "listener": "SocialiteProviders\\Zoho\\ZohoExtendSocialite@handle"
 }]
