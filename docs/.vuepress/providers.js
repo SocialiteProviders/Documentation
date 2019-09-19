@@ -999,4 +999,11 @@ module.exports = [{
   "maintainer_profile": "https://github.com/glowlogix",
   "packagist": "socialiteproviders/zoho",
   "listener": "SocialiteProviders\\Zoho\\ZohoExtendSocialite@handle"
+},{
+  "name": "Wonderlist",
+  "github": "https://github.com/SocialiteProviders/Wonderlist",
+  "maintainer": "wonderlist",
+  "maintainer_profile": "https://github.com/wonderlist",
+  "packagist": "socialiteproviders/wonderlist",
+  "listener": "SocialiteProviders\\Wonderlist\\WonderlistExtendSocialite@handle"
 }]
