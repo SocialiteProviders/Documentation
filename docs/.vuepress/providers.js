@@ -1002,8 +1002,8 @@ module.exports = [{
 },{
   "name": "Wonderlist",
   "github": "https://github.com/SocialiteProviders/Wonderlist",
-  "maintainer": "wonderlist",
-  "maintainer_profile": "https://github.com/wonderlist",
+  "maintainer": "andrewmherren",
+  "maintainer_profile": "https://github.com/andrewmherren",
   "packagist": "socialiteproviders/wonderlist",
   "listener": "SocialiteProviders\\Wonderlist\\WonderlistExtendSocialite@handle"
 }]
