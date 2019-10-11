@@ -471,6 +471,13 @@ module.exports = [{
   "packagist": "socialiteproviders/naver",
   "listener": "SocialiteProviders\\Naver\\NaverExtendSocialite@handle"
 }, {
+  "name": "Nocks",
+  "github": "https://github.com/SocialiteProviders/Nocks",
+  "maintainer": "Paulsky",
+  "maintainer_profile": "https://github.com/Paulsky",
+  "packagist": "socialiteproviders/nocks",
+  "listener": "SocialiteProviders\\Nocks\\NocksExtendSocialite@handle"
+}, {
   "name": "OAuthgen",
   "github": "https://github.com/SocialiteProviders/OAuthgen",
   "maintainer": "icernn03",
