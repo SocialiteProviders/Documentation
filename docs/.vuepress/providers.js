@@ -41,6 +41,17 @@ module.exports = [{
   "packagist": "socialiteproviders/appnet",
   "listener": "SocialiteProviders\\AppNet\\AppNetExtendSocialite@handle"
 }, {
+  "name": "Auth0",
+  "github": "https://github.com/SocialiteProviders/Auth0",
+  "maintainer": "chaseconey",
+  "maintainer_profile": "https://github.com/chaseconey",
+  "packagist": "socialiteproviders/auth0",
+  "listener": "SocialiteProviders\\Auth0\\Auth0ExtendSocialite@handle",
+  "extra_service_lines": [{
+    "key": "BASE_URL",
+    "value": "BASE_URL"
+  }]
+}, {
   "name": "Asana",
   "github": "https://github.com/SocialiteProviders/Asana",
   "maintainer": "faustbrian",
