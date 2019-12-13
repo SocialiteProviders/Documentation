@@ -357,6 +357,13 @@ module.exports = [{
   "packagist": "socialiteproviders/jira",
   "listener": "SocialiteProviders\\Jira\\JiraExtendSocialite@handle"
 }, {
+  "name": "JohnDeere",
+  "github": "https://github.com/SocialiteProviders/JohnDeere",
+  "maintainer": "noreaum",
+  "maintainer_profile": "https://github.com/noreaum",
+  "packagist": "socialiteproviders/john-deere",
+  "listener": "SocialiteProviders\\JohnDeere\\JohnDeereExtendSocialite@handle"
+}, {
   "name": "Kakao",
   "github": "https://github.com/SocialiteProviders/Kakao",
   "maintainer": "visualplus",
