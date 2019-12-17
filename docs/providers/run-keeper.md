@@ -131,6 +131,10 @@ $user = Socialite::driver('RunKeeper')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

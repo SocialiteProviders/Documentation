@@ -152,6 +152,12 @@ $user = Socialite::driver('wechat_service_account')->scopes('unionid')->user();
 $user = Socialite::driver('wechat_service_account')->scopes('snsapi_base')->user();
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``nickname``
+- ``avatar``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

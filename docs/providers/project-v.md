@@ -131,6 +131,23 @@ $user = Socialite::driver('ProjectV')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``gid``
+- ``vid``
+- ``nickname``
+- ``forename``
+- ``lastname``
+- ``avatarurl``
+- ``email``
+- ``vlevel``
+- ``vpoints``
+- ``quarantine``
+- ``active``
+- ``blacklisted``
+- ``verified``
+- ``flagged``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

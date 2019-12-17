@@ -9,7 +9,7 @@ title: "37Signals"
 composer require socialiteproviders/37signals
 ```
 
-## 2. Service Provider
+## 2. Service Provider  
 
 * Remove `Laravel\Socialite\SocialiteServiceProvider` from your `providers[]` array in `config\app.php` if you have added it already.
 
@@ -130,6 +130,12 @@ You can get the access token response body, after you called the `user()` method
 $user = Socialite::driver('37Signals')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
+
+::: warning Provider returns following User fields 
+- ``id``
+- ``name``
+- ``email``
+:::
 
 #### Reference
 

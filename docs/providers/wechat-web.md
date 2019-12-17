@@ -145,6 +145,12 @@ $accessTokenResponseBody = $user->accessTokenResponseBody;
 $user = Socialite::driver('wechat_web')->scopes('unionid')->user();
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``nickname``
+- ``avatar``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

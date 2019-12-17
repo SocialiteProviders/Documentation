@@ -2,6 +2,10 @@
 title: "VKontakte"
 ---
 
+::: tip Register an application 
+Add new application at [vk.com](https://vk.com/editapp?act=create).
+:::
+
 ## 1. Installation
 
 ```bash
@@ -131,7 +135,16 @@ $user = Socialite::driver('vkontakte')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``nickname``
+- ``name``
+- ``email``
+- ``avatar``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)
 * [Laracasts Socialite video](https://laracasts.com/series/whats-new-in-laravel-5/episodes/9)
+* [Vk.com API Reference](https://vk.com/dev/methods)

@@ -131,6 +131,12 @@ $user = Socialite::driver('Dailymile')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``nickname``
+- ``name``
+- ``avatar``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

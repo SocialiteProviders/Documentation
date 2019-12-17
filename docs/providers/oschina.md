@@ -131,6 +131,17 @@ $user = Socialite::driver('OSChina')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``name``
+- ``nickname`` (same as ``name``)
+- ``email``
+- ``avatar``
+- ``gender``
+- ``location``
+- ``url``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

@@ -139,6 +139,22 @@ $user = Socialite::driver('graph')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``name``
+- ``email``
+- ``businessPhones``
+- ``displayName``
+- ``givenName``
+- ``jobTitle``
+- ``mail``
+- ``mobilePhone``
+- ``officeLocation``
+- ``preferredLanguage``
+- ``surname``
+- ``userPrincipalName``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

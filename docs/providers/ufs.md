@@ -132,6 +132,14 @@ $user = Socialite::driver('UFS')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``nickname``
+- ``name``
+- ``email``
+- ``avatar``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

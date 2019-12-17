@@ -131,6 +131,17 @@ $user = Socialite::driver('Mixer')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``nickname``
+- ``email``
+- ``avatar``
+- ``username`` (same as ``nickname``)
+- ``twoFactor``
+- ``avatarUrl``
+- ``verified``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

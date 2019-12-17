@@ -131,6 +131,13 @@ $user = Socialite::driver('mediacube')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``first_name``
+- ``last_name``
+- ``email``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

@@ -132,6 +132,19 @@ $user = Socialite::driver('okta')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``email``
+- ``email_verified``
+- ``nickname``
+- ``name``
+- ``first_name``
+- ``last_name``
+- ``profileUrl``
+- ``address``
+- ``phone``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

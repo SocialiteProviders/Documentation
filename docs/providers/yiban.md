@@ -131,6 +131,15 @@ $user = Socialite::driver('Yiban')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``name``
+- ``sex``
+- ``avatar``
+- ``schoolId``
+- ``studentId``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

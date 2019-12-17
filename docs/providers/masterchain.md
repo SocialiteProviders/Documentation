@@ -131,6 +131,14 @@ $user = Socialite::driver('Masterchain')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``phone``
+- ``email``
+- ``country_code``
+- ``created_at``
+- ``mbt_count``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

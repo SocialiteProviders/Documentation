@@ -2,6 +2,12 @@
 title: "HeadHunter"
 ---
 
+::: tip Register an application 
+Add new application at [hh.ru](https://dev.hh.ru/admin).
+
+In rare cases, the review timeout can reach 20 working days.
+:::
+
 ## 1. Installation
 
 ```bash
@@ -136,7 +142,15 @@ $user = Socialite::driver('headhunter')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``nickname`` (same as ``email``)
+- ``name``
+- ``email``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)
 * [Laracasts Socialite video](https://laracasts.com/series/whats-new-in-laravel-5/episodes/9)
+* [HeadHunter API Reference](https://github.com/hhru/api/blob/master/docs_eng/general.md)

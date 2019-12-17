@@ -131,6 +131,16 @@ $user = Socialite::driver('SciStarter')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``nickname``
+- ``email``
+- ``first_name``
+- ``last_name``
+- ``profile_id``
+- ``profile_url``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

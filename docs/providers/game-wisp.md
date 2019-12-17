@@ -131,6 +131,15 @@ $user = Socialite::driver('GameWisp')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``username``
+- ``email``
+- ``avatar``
+- ``deactivated``
+- ``banned``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

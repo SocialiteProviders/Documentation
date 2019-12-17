@@ -131,6 +131,14 @@ $user = Socialite::driver('Spotify')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``name``
+- ``email``
+- ``avatar``
+- ``profileUrl``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

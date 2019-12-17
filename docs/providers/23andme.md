@@ -2,6 +2,10 @@
 title: "23andme"
 ---
 
+::: tip Register an application 
+Add new application at [23andme.com](https://api.23andme.com/apply/).
+:::
+
 ## 1. Installation
 
 ```bash
@@ -131,7 +135,13 @@ $user = Socialite::driver('23andme')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields
+- ``id``
+- ``email``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)
 * [Laracasts Socialite video](https://laracasts.com/series/whats-new-in-laravel-5/episodes/9)
+* [23andme API Reference](https://api.23andme.com/docs/reference/)

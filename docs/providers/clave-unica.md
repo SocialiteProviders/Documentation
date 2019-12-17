@@ -134,6 +134,15 @@ $user = Socialite::driver('claveunica')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``name``
+- ``first_name``
+- ``last_name``
+- ``run``
+- ``dv``
+:::
+
 #### Reference
 
 * [ClaveUnica docs](https://claveunica.gob.cl/institucional/manual-de-instalacion)

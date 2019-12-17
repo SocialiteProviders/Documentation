@@ -148,6 +148,17 @@ $user = Socialite::driver('Jira')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``nickname``
+- ``name``
+- ``email``
+- ``avatar``
+- ``active``
+- ``timezone``
+- ``locale``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

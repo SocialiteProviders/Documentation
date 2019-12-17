@@ -2,6 +2,10 @@
 title: "Mail.ru"
 ---
 
+::: tip Register an application 
+Add new application at [mail.ru](https://oauth.mail.ru/app/).
+:::
+
 ## 1. Installation
 
 ```bash
@@ -131,7 +135,16 @@ $user = Socialite::driver('mailru')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id`` (same as ``email``)
+- ``nickname``
+- ``name``
+- ``email``
+- ``avatar``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)
 * [Laracasts Socialite video](https://laracasts.com/series/whats-new-in-laravel-5/episodes/9)
+* [Mail.ru API Reference](https://oauth.mail.ru/docs/)

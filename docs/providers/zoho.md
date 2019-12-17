@@ -1,6 +1,10 @@
 ---
-title: "Zoho"
+    title: "Zoho"
 ---
+
+::: tip Register an application 
+Add new application at [zoho.com](https://accounts.zoho.com/developerconsole).
+:::
 
 ## 1. Installation
 
@@ -131,7 +135,15 @@ $user = Socialite::driver('zoho')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``nickname``
+- ``name``
+- ``avatar``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)
 * [Laracasts Socialite video](https://laracasts.com/series/whats-new-in-laravel-5/episodes/9)
+* [Zoho API Reference](https://www.zoho.com/developer/rest-api.html)

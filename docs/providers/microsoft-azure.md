@@ -138,6 +138,12 @@ Socialite::driver('azure')
          ->redirect();
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``name``
+- ``email``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)

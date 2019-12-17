@@ -2,6 +2,12 @@
 title: "MoiKrug.ru"
 ---
 
+::: tip Register an application 
+Add new application at [career.habr.com](https://career.habr.com/profile/applications/new).
+
+In rare cases, the review timeout can reach 20 working days.
+:::
+
 ## 1. Installation
 
 ```bash
@@ -129,7 +135,16 @@ $user = Socialite::driver('moikrug')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
+::: warning Provider returns following User fields 
+- ``id``
+- ``nickname``
+- ``name``
+- ``email``
+- ``avatar``
+:::
+
 #### Reference
 
 * [Laravel Socialite Docs](https://github.com/laravel/socialite)
 * [Laracasts Socialite video](https://laracasts.com/series/whats-new-in-laravel-5/episodes/9)
+* [Habr Career API Reference](https://career.habr.com/info/api)
