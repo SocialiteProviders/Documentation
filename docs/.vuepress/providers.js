@@ -1014,6 +1014,13 @@ module.exports = [{
   "packagist": "socialiteproviders/discogs",
   "listener": "SocialiteProviders\\Discogs\\DiscogsExtendSocialite@handle"
 },{
+  "name": "Zalo",
+  "github": "https://github.com/SocialiteProviders/Zalo",
+  "maintainer": "tmtung144",
+  "maintainer_profile": "https://github.com/tmtung144",
+  "packagist": "socialiteproviders/zalo",
+  "listener": "SocialiteProviders\\Zalo\\ZaloExtendSocialite@handle"
+},{
   "name": "Zoho",
   "github": "https://github.com/SocialiteProviders/Zoho",
   "maintainer": "glowlogix",
