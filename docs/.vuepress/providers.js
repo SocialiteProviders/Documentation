@@ -343,6 +343,13 @@ module.exports = [{
   "packagist": "socialiteproviders/instagram",
   "listener": "SocialiteProviders\\Instagram\\InstagramExtendSocialite@handle"
 }, {
+  "name": "Instagram Basic Display",
+  "github": "https://github.com/SocialiteProviders/InstagramBasic",
+  "maintainer": "pmochine",
+  "maintainer_profile": "https://github.com/pmochine",
+  "packagist": "socialiteproviders/instagram-basic",
+  "listener": "SocialiteProviders\\InstagramBasic\\InstagramBasicExtendSocialite@handle"
+}, {
   "name": "Jawbone",
   "github": "https://github.com/SocialiteProviders/Jawbone",
   "maintainer": "faustbrian",

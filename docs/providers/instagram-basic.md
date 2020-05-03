@@ -35,7 +35,7 @@ For example:
 
 * Add your listeners (i.e. the ones from the providers) to the `SocialiteProviders\Manager\SocialiteWasCalled[]` that you just created.
 
-* The listener that you add for this provider is `'SocialiteProviders\\Instagram\\InstagramBasicExtendSocialite@handle',`.
+* The listener that you add for this provider is `'SocialiteProviders\\InstagramBasic\\InstagramBasicExtendSocialite@handle',`.
 
 * Note: You do not need to add anything for the built-in socialite providers unless you override them with your own providers.
 
@@ -50,7 +50,7 @@ For example:
 protected $listen = [
     \SocialiteProviders\Manager\SocialiteWasCalled::class => [
         // add your listeners (aka providers) here
-        'SocialiteProviders\\Instagram\\InstagramBasicExtendSocialite@handle',
+        'SocialiteProviders\\InstagramBasic\\InstagramBasicExtendSocialite@handle',
     ],
 ];
 ```
