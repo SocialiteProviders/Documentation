@@ -265,6 +265,13 @@ module.exports = [{
   "packagist": "socialiteproviders/foursquare",
   "listener": "SocialiteProviders\\Foursquare\\FoursquareExtendSocialite@handle"
 }, {
+  "name": "GettyImages",
+  "github": "https://github.com/SocialiteProviders/GettyImages",
+  "maintainer": "bbashel1",
+  "maintainer_profile": "https://github.com/bbashel1",
+  "packagist": "socialiteproviders/gettyimages",
+  "listener": "SocialiteProviders\\GettyImages\\GettyImagesExtendSocialite@handle"
+},{
   "name": "GitHub",
   "github": "https://github.com/SocialiteProviders/GitHub",
   "maintainer": "antonkomarev",
