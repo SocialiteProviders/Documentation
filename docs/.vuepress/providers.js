@@ -265,7 +265,7 @@ module.exports = [{
   "packagist": "socialiteproviders/foursquare",
   "listener": "SocialiteProviders\\Foursquare\\FoursquareExtendSocialite@handle"
 }, {
-  "name": "GettyImages",
+  "name": "Gettyimages",
   "github": "https://github.com/SocialiteProviders/GettyImages",
   "maintainer": "bbashel1",
   "maintainer_profile": "https://github.com/bbashel1",
@@ -350,7 +350,7 @@ module.exports = [{
   "packagist": "socialiteproviders/instagram",
   "listener": "SocialiteProviders\\Instagram\\InstagramExtendSocialite@handle"
 }, {
-  "name": "Instagram Basic Display",
+  "name": "Instagram Basic",
   "github": "https://github.com/SocialiteProviders/InstagramBasic",
   "maintainer": "pmochine",
   "maintainer_profile": "https://github.com/pmochine",
