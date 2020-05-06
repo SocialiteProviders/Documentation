@@ -85,6 +85,11 @@ For easy Apple Client Secret generation and management use the [Socialite-Apple-
 return Socialite::with('apple')->redirect();
 
 // fetch user after callback
+// [NOTE]: You must use POST route for Sign in with Apple callback Url
+// Examples :
+// Route::post('socialite/apple/callback', 'SocialiteController@callback'); 
+// Route::match(['get', 'post'], 'socialite/{provider}/callback', 'SocialiteController@callback');
+//
 $user = Socialite::with('apple')->user();
 
 // fetch user using token ( token from apple authentication )
