@@ -68,7 +68,8 @@ You will need to add an entry to the services configuration file so that after c
 'zendesk' => [
     'client_id' => env('ZENDESK_KEY'),
     'client_secret' => env('ZENDESK_SECRET'),
-    'redirect' => env('ZENDESK_REDIRECT_URI')
+    'redirect' => env('ZENDESK_REDIRECT_URI'),
+    'subdomain' => env('ZENDESK_SUBDOMAIN'),
 ],
 ```
 
