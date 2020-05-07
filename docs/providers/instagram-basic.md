@@ -67,7 +67,7 @@ You will need to add an entry to the services configuration file so that after c
 #### Add to `config/services.php`.
 
 ```php
-'instagram' => [
+'instagrambasic' => [
     'client_id' => env('INSTAGRAM_BASIC_KEY'),
     'client_secret' => env('INSTAGRAM_BASIC_SECRET'),
     'redirect' => env('INSTAGRAM_BASIC_REDIRECT'),
@@ -81,7 +81,7 @@ You will need to add an entry to the services configuration file so that after c
 * You should now be able to use it like you would regularly use Socialite (assuming you have the facade installed):
 
 ```php
-return Socialite::with('Instagrambasic')->redirect();
+return Socialite::with('instagrambasic')->redirect();
 ```
 
 ### Lumen Support
