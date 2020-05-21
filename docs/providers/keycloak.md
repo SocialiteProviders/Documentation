@@ -1,12 +1,12 @@
 ---
-title: "Zendesk"
+title: "Keycloak"
 ---
 
 ## 1. Installation
 
 ```bash
 // This assumes that you have composer installed globally
-composer require socialiteproviders/zendesk
+composer require socialiteproviders/keycloak
 ```
 
 ## 2. Service Provider
@@ -33,7 +33,7 @@ For example:
 
 * Add your listeners (i.e. the ones from the providers) to the `SocialiteProviders\Manager\SocialiteWasCalled[]` that you just created.
 
-* The listener that you add for this provider is `'SocialiteProviders\\Zendesk\\ZendeskExtendSocialite@handle',`.
+* The listener that you add for this provider is `'SocialiteProviders\\Keycloak\\KeycloakExtendSocialite@handle',`.
 
 * Note: You do not need to add anything for the built-in socialite providers unless you override them with your own providers.
 
@@ -48,7 +48,7 @@ For example:
 protected $listen = [
     \SocialiteProviders\Manager\SocialiteWasCalled::class => [
         // add your listeners (aka providers) here
-        'SocialiteProviders\\Zendesk\\ZendeskExtendSocialite@handle',
+        'SocialiteProviders\\Keycloak\\KeycloakExtendSocialite@handle',
     ],
 ];
 ```
@@ -65,11 +65,11 @@ You will need to add an entry to the services configuration file so that after c
 #### Add to `config/services.php`.
 
 ```php
-'zendesk' => [
-    'client_id' => env('ZENDESK_KEY'),
-    'client_secret' => env('ZENDESK_SECRET'),
-    'redirect' => env('ZENDESK_REDIRECT_URI'),
-    'subdomain' => env('ZENDESK_SUBDOMAIN'),
+'keycloak' => [
+     'client_id'        => env('KEYCLOAK_CLIENT_ID'),
+     'client_secret'    => env('KEYCLOAK_CLIENT_SECRET'),
+     'redirect'         => env('KEYCLOAK_REDIRECT_URI'),
+     'base_url'         => env('KEYCLOAK_BASE_URL'),
 ],
 ```
 
@@ -80,7 +80,7 @@ You will need to add an entry to the services configuration file so that after c
 * You should now be able to use it like you would regularly use Socialite (assuming you have the facade installed):
 
 ```php
-return Socialite::with('Zendesk')->redirect();
+return Socialite::with('keycloak')->redirect();
 ```
 
 ### Lumen Support
@@ -100,10 +100,10 @@ Also, configs cannot be parsed from the `services[]` in Lumen.  You can only set
 
 ```php
 // to turn off stateless
-return Socialite::with('Zendesk')->stateless(false)->redirect();
+return Socialite::with('keycloak')->stateless(false)->redirect();
 
 // to use stateless
-return Socialite::with('Zendesk')->stateless()->redirect();
+return Socialite::with('keycloak')->stateless()->redirect();
 ```
 
 ### Overriding a config
@@ -114,9 +114,9 @@ If you need to override the provider's environment or config variables dynamical
 $clientId = "secret";
 $clientSecret = "secret";
 $redirectUrl = "http://yourdomain.com/api/redirect";
-$additionalProviderConfig = ['site' => 'meta.stackoverflow.com'];
+$additionalProviderConfig = ['realms' => 'master'];
 $config = new \SocialiteProviders\Manager\Config($clientId, $clientSecret, $redirectUrl, $additionalProviderConfig);
-return Socialite::with('Zendesk')->setConfig($config)->redirect();
+return Socialite::with('keycloak')->setConfig($config)->redirect();
 ```
 
 ### Retrieving the Access Token Response Body
@@ -128,7 +128,7 @@ may contain items such as a `refresh_token`.
 You can get the access token response body, after you called the `user()` method in Socialite, by accessing the property `$user->accessTokenResponseBody`;
 
 ```php
-$user = Socialite::driver('Zendesk')->user();
+$user = Socialite::driver('keycloak')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 

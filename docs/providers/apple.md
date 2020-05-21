@@ -1,12 +1,12 @@
 ---
-title: "Zendesk"
+title: "Apple"
 ---
 
 ## 1. Installation
 
 ```bash
 // This assumes that you have composer installed globally
-composer require socialiteproviders/zendesk
+composer require socialiteproviders/apple
 ```
 
 ## 2. Service Provider
@@ -33,7 +33,7 @@ For example:
 
 * Add your listeners (i.e. the ones from the providers) to the `SocialiteProviders\Manager\SocialiteWasCalled[]` that you just created.
 
-* The listener that you add for this provider is `'SocialiteProviders\\Zendesk\\ZendeskExtendSocialite@handle',`.
+* The listener that you add for this provider is `'SocialiteProviders\\Apple\\AppleExtendSocialite@handle',`.
 
 * Note: You do not need to add anything for the built-in socialite providers unless you override them with your own providers.
 
@@ -48,30 +48,31 @@ For example:
 protected $listen = [
     \SocialiteProviders\Manager\SocialiteWasCalled::class => [
         // add your listeners (aka providers) here
-        'SocialiteProviders\\Zendesk\\ZendeskExtendSocialite@handle',
+        'SocialiteProviders\\Apple\\AppleExtendSocialite@handle',
     ],
 ];
 ```
 
 #### Reference
 
-* [Laravel docs about events](http://laravel.com/docs/5.0/events)
-* [Laracasts video on events in Laravel 5](https://laracasts.com/lessons/laravel-5-events)
+* [Laravel docs about events](http://laravel.com/docs/events)
+* [Laracasts video on events in Laravel](https://laracasts.com/lessons/laravel-5-events)
 
-## 4. Configuration setup
+## 4. Configuration Setup
 
 You will need to add an entry to the services configuration file so that after config files are cached for usage in production environment (Laravel command `artisan config:cache`) all config is still available.
 
 #### Add to `config/services.php`.
 
 ```php
-'zendesk' => [
-    'client_id' => env('ZENDESK_KEY'),
-    'client_secret' => env('ZENDESK_SECRET'),
-    'redirect' => env('ZENDESK_REDIRECT_URI'),
-    'subdomain' => env('ZENDESK_SUBDOMAIN'),
+"apple" => [    
+  "client_id" => env("APPLE_CLIENT_ID"),  
+  "client_secret" => env("APPLE_CLIENT_SECRET"),  
+  "redirect" => env("APPLE_REDIRECT_URI") 
 ],
 ```
+
+For easy Apple Client Secret generation and management use the [Socialite-Apple-Helper](https://github.com/Ahilmurugesan/socialite-apple-helper) package.
 
 ## 5. Usage
 
@@ -80,8 +81,25 @@ You will need to add an entry to the services configuration file so that after c
 * You should now be able to use it like you would regularly use Socialite (assuming you have the facade installed):
 
 ```php
-return Socialite::with('Zendesk')->redirect();
+// authorize with provider
+return Socialite::with('apple')->redirect();
+
+// fetch user after callback
+// [NOTE]: You must use POST route for Sign in with Apple callback Url
+// Examples :
+// Route::post('socialite/apple/callback', 'SocialiteController@callback'); 
+// Route::match(['get', 'post'], 'socialite/{provider}/callback', 'SocialiteController@callback');
+//
+$user = Socialite::with('apple')->user();
+
+// fetch user using token ( token from apple authentication )
+$token = "eyJraWQiOiJlWGF1bm1MIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwczovL2FwcGxlaWQuYXBwbGUuY29tIiwiYXVkIjoiY29tLnZvbmVjLnNpd2EuYXBpIiwiZXhwIjoxNTg3OTI2MjAzLCJpYXQiOjE1ODc5MjU2MDMsInN1YiI6IjAwMTcxMC44NThkN2NhNWUwZDg0MWI5ODFiNGVkYWY2NWM0M2ZmNi4xOTMyIiwiYXRfaGFzaCI6IjRHZFprR0k2X2Q3Qk5xMFFJTkhKZEEiLCJlbWFpbCI6ImFoaWxtdXJ1Z2VzYW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOiJ0cnVlIiwiYXV0aF90aW1lIjoxNTg3OTI1NjAxLCJub25jZV9zdXBwb3J0ZWQiOnRydWV9.ciXdwwkySnG-Ne_l9NqxuLkDPyptUVvJ_Puk10LSsXNEtLBAijskQhIjwi3HYsEXNLdlbMGfJ25rnlMWu93RoqYJFo_u_rFjH_4Xt9E_ddnqY147yZvVw5k912FtXabQSl2bFiR7yrzuQvznxyAiYFP9v9HvXyTcYS2ki6ISdPjmTyb927yWyGDx-aigksV752toAA8XXmjjEyi01eY-wng4CaV4mxjJU_bQSpnh6zGLpmI-lxqBIfSbvW1ukMDh9VW7fIRq9l3yFba91TAT9oBv7QQVcEAU7jHNzKX3qU7JvCfr7d2UUXFVkOxYZFz1HuPHB5C9QuYn5TtFUb2ozw";
+$user = Socialite::with('apple')->userFromToken($token));
 ```
+Apple sends the user name only once during the initial authorization, subsequent authorization request only have email and provider user id. So it is advisable to save the user name during the initial request and associate it with the provider user id. 
+
+* [Laravel docs on Socialite](https://laravel.com/docs/master/socialite)
+* [Demo Repo](https://github.com/VonecTechnologies/socialite-apple-sample/)
 
 ### Lumen Support
 
@@ -100,10 +118,10 @@ Also, configs cannot be parsed from the `services[]` in Lumen.  You can only set
 
 ```php
 // to turn off stateless
-return Socialite::with('Zendesk')->stateless(false)->redirect();
+return Socialite::with('apple')->redirect();
 
 // to use stateless
-return Socialite::with('Zendesk')->stateless()->redirect();
+return Socialite::with('apple')->stateless()->redirect();
 ```
 
 ### Overriding a config
@@ -115,8 +133,8 @@ $clientId = "secret";
 $clientSecret = "secret";
 $redirectUrl = "http://yourdomain.com/api/redirect";
 $additionalProviderConfig = ['site' => 'meta.stackoverflow.com'];
-$config = new \SocialiteProviders\Manager\Config($clientId, $clientSecret, $redirectUrl, $additionalProviderConfig);
-return Socialite::with('Zendesk')->setConfig($config)->redirect();
+$config = new \SocialiteProviders\Manager\Config($clientId, $clientSecret, $redirectUrl);
+return Socialite::with('apple')->setConfig($config)->redirect();
 ```
 
 ### Retrieving the Access Token Response Body
@@ -128,11 +146,11 @@ may contain items such as a `refresh_token`.
 You can get the access token response body, after you called the `user()` method in Socialite, by accessing the property `$user->accessTokenResponseBody`;
 
 ```php
-$user = Socialite::driver('Zendesk')->user();
+$user = Socialite::driver('apple')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
 #### Reference
 
-* [Laravel Socialite Docs](https://github.com/laravel/socialite)
-* [Laracasts Socialite video](https://laracasts.com/series/whats-new-in-laravel-5/episodes/9)
+* [Laravel Socialite Docs](https://laravel.com/docs/socialite)
+* [Sign in with Apple Docs](https://developer.apple.com/documentation/sign_in_with_apple)

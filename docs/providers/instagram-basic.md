@@ -1,12 +1,14 @@
 ---
-title: "Zendesk"
+title: "Instagram Basic Display API"
 ---
+
+>WARNING: Instagram Basic Display is not an authentication solution. Data returned by the API cannot be used to authenticate your app users or log them into your app. If you need an authentication solution we recommend using Facebook Login instead
 
 ## 1. Installation
 
 ```bash
 // This assumes that you have composer installed globally
-composer require socialiteproviders/zendesk
+composer require socialiteproviders/instagram-basic
 ```
 
 ## 2. Service Provider
@@ -33,7 +35,7 @@ For example:
 
 * Add your listeners (i.e. the ones from the providers) to the `SocialiteProviders\Manager\SocialiteWasCalled[]` that you just created.
 
-* The listener that you add for this provider is `'SocialiteProviders\\Zendesk\\ZendeskExtendSocialite@handle',`.
+* The listener that you add for this provider is `'SocialiteProviders\\InstagramBasic\\InstagramBasicExtendSocialite@handle',`.
 
 * Note: You do not need to add anything for the built-in socialite providers unless you override them with your own providers.
 
@@ -48,7 +50,7 @@ For example:
 protected $listen = [
     \SocialiteProviders\Manager\SocialiteWasCalled::class => [
         // add your listeners (aka providers) here
-        'SocialiteProviders\\Zendesk\\ZendeskExtendSocialite@handle',
+        'SocialiteProviders\\InstagramBasic\\InstagramBasicExtendSocialite@handle',
     ],
 ];
 ```
@@ -65,11 +67,10 @@ You will need to add an entry to the services configuration file so that after c
 #### Add to `config/services.php`.
 
 ```php
-'zendesk' => [
-    'client_id' => env('ZENDESK_KEY'),
-    'client_secret' => env('ZENDESK_SECRET'),
-    'redirect' => env('ZENDESK_REDIRECT_URI'),
-    'subdomain' => env('ZENDESK_SUBDOMAIN'),
+'instagrambasic' => [
+    'client_id' => env('INSTAGRAM_BASIC_KEY'),
+    'client_secret' => env('INSTAGRAM_BASIC_SECRET'),
+    'redirect' => env('INSTAGRAM_BASIC_REDIRECT'),
 ],
 ```
 
@@ -80,7 +81,7 @@ You will need to add an entry to the services configuration file so that after c
 * You should now be able to use it like you would regularly use Socialite (assuming you have the facade installed):
 
 ```php
-return Socialite::with('Zendesk')->redirect();
+return Socialite::with('instagrambasic')->redirect();
 ```
 
 ### Lumen Support
@@ -100,10 +101,10 @@ Also, configs cannot be parsed from the `services[]` in Lumen.  You can only set
 
 ```php
 // to turn off stateless
-return Socialite::with('Zendesk')->stateless(false)->redirect();
+return Socialite::with('Instagrambasic')->stateless(false)->redirect();
 
 // to use stateless
-return Socialite::with('Zendesk')->stateless()->redirect();
+return Socialite::with('Instagrambasic')->stateless()->redirect();
 ```
 
 ### Overriding a config
@@ -116,10 +117,12 @@ $clientSecret = "secret";
 $redirectUrl = "http://yourdomain.com/api/redirect";
 $additionalProviderConfig = ['site' => 'meta.stackoverflow.com'];
 $config = new \SocialiteProviders\Manager\Config($clientId, $clientSecret, $redirectUrl, $additionalProviderConfig);
-return Socialite::with('Zendesk')->setConfig($config)->redirect();
+return Socialite::with('Instagrambasic')->setConfig($config)->redirect();
 ```
 
 ### Retrieving the Access Token Response Body
+
+>Since this is not used for authentication, the user object is missing fields.
 
 Laravel Socialite by default only allows access to the `access_token`.  Which can be accessed
 via the `\Laravel\Socialite\User->token` public property.  Sometimes you need access to the whole response body which
@@ -128,7 +131,7 @@ may contain items such as a `refresh_token`.
 You can get the access token response body, after you called the `user()` method in Socialite, by accessing the property `$user->accessTokenResponseBody`;
 
 ```php
-$user = Socialite::driver('Zendesk')->user();
+$user = Socialite::driver('Instagrambasic')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 

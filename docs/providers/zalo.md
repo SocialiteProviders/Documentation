@@ -1,12 +1,12 @@
 ---
-title: "Zendesk"
+title: "Zalo"
 ---
 
 ## 1. Installation
 
 ```bash
 // This assumes that you have composer installed globally
-composer require socialiteproviders/zendesk
+composer require socialiteproviders/zalo
 ```
 
 ## 2. Service Provider
@@ -33,7 +33,7 @@ For example:
 
 * Add your listeners (i.e. the ones from the providers) to the `SocialiteProviders\Manager\SocialiteWasCalled[]` that you just created.
 
-* The listener that you add for this provider is `'SocialiteProviders\\Zendesk\\ZendeskExtendSocialite@handle',`.
+* The listener that you add for this provider is `'SocialiteProviders\\Zalo\\ZaloExtendSocialite@handle',`.
 
 * Note: You do not need to add anything for the built-in socialite providers unless you override them with your own providers.
 
@@ -48,7 +48,7 @@ For example:
 protected $listen = [
     \SocialiteProviders\Manager\SocialiteWasCalled::class => [
         // add your listeners (aka providers) here
-        'SocialiteProviders\\Zendesk\\ZendeskExtendSocialite@handle',
+        'SocialiteProviders\\Zalo\\ZaloExtendSocialite@handle',
     ],
 ];
 ```
@@ -65,11 +65,10 @@ You will need to add an entry to the services configuration file so that after c
 #### Add to `config/services.php`.
 
 ```php
-'zendesk' => [
-    'client_id' => env('ZENDESK_KEY'),
-    'client_secret' => env('ZENDESK_SECRET'),
-    'redirect' => env('ZENDESK_REDIRECT_URI'),
-    'subdomain' => env('ZENDESK_SUBDOMAIN'),
+'zalo' => [
+    'client_id' => env('ZALO_CLIENT_ID'),
+    'client_secret' => env('ZALO_CLIENT_SECRET'),
+    'redirect' => env('ZALO_REDIRECT_URI')
 ],
 ```
 
@@ -80,7 +79,7 @@ You will need to add an entry to the services configuration file so that after c
 * You should now be able to use it like you would regularly use Socialite (assuming you have the facade installed):
 
 ```php
-return Socialite::with('Zendesk')->redirect();
+return Socialite::with('Zalo')->redirect();
 ```
 
 ### Lumen Support
@@ -100,23 +99,31 @@ Also, configs cannot be parsed from the `services[]` in Lumen.  You can only set
 
 ```php
 // to turn off stateless
-return Socialite::with('Zendesk')->stateless(false)->redirect();
+return Socialite::with('Zalo')->stateless(false)->redirect();
 
 // to use stateless
-return Socialite::with('Zendesk')->stateless()->redirect();
+return Socialite::with('Zalo')->stateless()->redirect();
 ```
 
 ### Overriding a config
 
-If you need to override the provider's environment or config variables dynamically anywhere in your application, you may use the following:
+If you need to override the providers environment or config variables dynamically anywhere in your application, you may use the following:
 
 ```php
 $clientId = "secret";
 $clientSecret = "secret";
 $redirectUrl = "http://yourdomain.com/api/redirect";
-$additionalProviderConfig = ['site' => 'meta.stackoverflow.com'];
-$config = new \SocialiteProviders\Manager\Config($clientId, $clientSecret, $redirectUrl, $additionalProviderConfig);
-return Socialite::with('Zendesk')->setConfig($config)->redirect();
+$additionalProviderConfig = [
+    // Add additional configuration values here.
+];
+$config = new \SocialiteProviders\Manager\Config(
+    $clientId,
+    $clientSecret,
+    $redirectUrl,
+    $additionalProviderConfig
+);
+
+return Socialite::with('Zalo')->setConfig($config)->redirect();
 ```
 
 ### Retrieving the Access Token Response Body
@@ -128,7 +135,7 @@ may contain items such as a `refresh_token`.
 You can get the access token response body, after you called the `user()` method in Socialite, by accessing the property `$user->accessTokenResponseBody`;
 
 ```php
-$user = Socialite::driver('Zendesk')->user();
+$user = Socialite::driver('Zalo')->user();
 $accessTokenResponseBody = $user->accessTokenResponseBody;
 ```
 
