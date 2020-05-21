@@ -66,10 +66,10 @@ You will need to add an entry to the services configuration file so that after c
 
 ```php
 'auth0' => [
-    'client_id' => env('AUTH0_KEY'),
-    'client_secret' => env('AUTH0_SECRET'),
-    'redirect' => env('AUTH0_REDIRECT_URI'),
-    'base_url' => env('OKTA_BASE_URL')
+    'base_url' => env('AUTH0_DOMAIN'),
+    'client_id' => env('AUTH0_CLIENT_ID'),
+    'client_secret' => env('AUTH0_CLIENT_SECRET'),
+    'redirect' => env('AUTH0_REDIRECT', '/auth/auth0/callback')
 ],
 ```
 
