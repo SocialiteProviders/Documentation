@@ -66,6 +66,7 @@ You will need to add an entry to the services configuration file so that after c
 
 ```php
 'quickbooks' => [
+    'env' => env('QUICKBOOKS_ENV', 'production'), //Use QUICKBOOKS_ENV=development if using sandbox
     'client_id' => env('QUICKBOOKS_KEY'),
     'client_secret' => env('QUICKBOOKS_SECRET'),
     'redirect' => env('QUICKBOOKS_REDIRECT_URI')
