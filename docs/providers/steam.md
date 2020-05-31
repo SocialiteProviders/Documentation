@@ -66,9 +66,10 @@ You will need to add an entry to the services configuration file so that after c
 
 ```php
 'steam' => [
-    'client_id' => env('STEAM_KEY'),
-    'client_secret' => env('STEAM_SECRET'),
-    'redirect' => env('STEAM_REDIRECT_URI')
+    'client_id' => null,
+    'client_secret' => null,
+    'redirect' => env('APP_URL').'auth/steam/callback',
+    'api_key' => env('STEAM_API_KEY'),
 ],
 ```
 
