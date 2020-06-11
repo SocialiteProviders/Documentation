@@ -739,6 +739,14 @@ module.exports = [
     "listener": "SocialiteProviders\\Podio\\PodioExtendSocialite@handle"
   },
   {
+    "name": "Procore",
+    "github": "https://github.com/SocialiteProviders/Procore",
+    "maintainer": "chrisforrence",
+    "maintainer_profile": "https://github.com/chrisforrence",
+    "packagist": "socialiteproviders/procore",
+    "listener": "SocialiteProviders\\Procore\\ProcoreExtendSocialite@handle"
+  },
+  {
     "name": "ProjectV",
     "github": "https://github.com/SocialiteProviders/ProjectV",
     "maintainer": "vreezy",
