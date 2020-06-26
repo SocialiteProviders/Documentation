@@ -312,6 +312,14 @@ module.exports = [
     "listener": "SocialiteProviders\\Facebook\\FacebookExtendSocialite@handle"
   },
   {
+    "name": "Faceit",
+    "github": "https://github.com/SocialiteProviders/Faceit",
+    "maintainer": "sofwar",
+    "maintainer_profile": "https://github.com/sofwar",
+    "packagist": "socialiteproviders/faceit",
+    "listener": "SocialiteProviders\\Faceit\\FaceitExtendSocialite@handle"
+  },
+  {
     "name": "Fitbit",
     "github": "https://github.com/SocialiteProviders/Fitbit",
     "maintainer": "faustbrian",
